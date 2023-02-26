@@ -66,7 +66,7 @@ resource "aws_s3_bucket" "s3" {
   }
 }
 
-## External Data Source Block to Obtain User's Public IP and add to Security Group
+#User's Public IP and add to Security Group
 
 data "external" "myipaddr" {
   program = ["bash", "-c", "curl -s 'https://ipinfo.io/json'"]
